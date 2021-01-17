@@ -6,13 +6,21 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] Paddle paddle1;
     [SerializeField] Vector2 pToBVector;
-    [SerializeField] Vector2 launchVelocity = new Vector2(2f, 15f);
+    [SerializeField] AudioClip[] ballSounds;
+
+    //Ball State
     bool launched = false;
+    [SerializeField] Vector2 launchVelocity = new Vector2(2f, 15f);
+
+    //Cache component references
+    AudioSource ballAudioSource;
+
 
     // Start is called before the first frame update
     void Start()
     {
         pToBVector = transform.position - paddle1.transform.position;
+        ballAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,8 +54,12 @@ public class Ball : MonoBehaviour
     {
         if (launched)
         {
-            GetComponent<AudioSource>().Play();
-
+            if(collision.gameObject.name.Equals("Paddle")){
+                ballAudioSource.PlayOneShot(ballSounds[0]);
+            }else
+            {
+                ballAudioSource.PlayOneShot(ballSounds[1]);
+            }
         }
     }
 }

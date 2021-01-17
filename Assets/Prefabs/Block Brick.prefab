@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7251129343262721592}
   m_Layer: 0
   m_Name: Block Brick
-  m_TagString: Untagged
+  m_TagString: Block Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18a3478b2ceca04995119b84fdb4fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakSFX: {fileID: 8300000, guid: 5fb13fe9d6aec34488248d393840c4f6, type: 3}

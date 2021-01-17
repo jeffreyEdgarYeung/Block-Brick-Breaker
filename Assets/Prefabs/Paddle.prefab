@@ -130,3 +130,4 @@ MonoBehaviour:
   screenWidthUnits: 16
   minX: 1.25
   maxX: 14.75
+  gameBall: {fileID: 0}

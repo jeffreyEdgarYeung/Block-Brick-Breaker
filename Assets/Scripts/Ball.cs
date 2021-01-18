@@ -46,6 +46,7 @@ public class Ball : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !launched)
         {
             GetComponent<Rigidbody2D>().velocity = launchVelocity;
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
             launched = true;
         }
     }

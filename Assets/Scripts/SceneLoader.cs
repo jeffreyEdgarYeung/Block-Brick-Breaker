@@ -14,7 +14,10 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+        GameStatus gameStatus = FindObjectOfType<GameStatus>();
+        gameStatus.reset();
     }
 
     public void QuitGame()

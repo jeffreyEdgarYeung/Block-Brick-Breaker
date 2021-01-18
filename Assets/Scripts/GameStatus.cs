@@ -11,6 +11,20 @@ public class GameStatus : MonoBehaviour
     [SerializeField] int ptsPerBrick = 33;
     [SerializeField] TextMeshProUGUI scoreText;
 
+    void Awake()
+    {
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if(gameStatusCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void Start()
     {
         scoreText.text = score.ToString();
@@ -27,5 +41,10 @@ public class GameStatus : MonoBehaviour
         score += ptsPerBrick;
         scoreText.text = score.ToString();
 
+    }
+
+    public void reset()
+    {
+        Destroy(gameObject);
     }
 }

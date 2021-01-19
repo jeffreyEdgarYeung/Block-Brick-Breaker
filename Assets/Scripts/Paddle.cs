@@ -8,7 +8,6 @@ public class Paddle : MonoBehaviour
     [SerializeField] float minX = 1.23f;
     [SerializeField] float maxX = 14.76f;
     [SerializeField] Ball gameBall;
-    [SerializeField] bool autoPlay = false;
     [SerializeField] bool titleScreen = false;
 
     // Update is called once per frame
@@ -18,7 +17,7 @@ public class Paddle : MonoBehaviour
 
         Vector2 paddlePosition = new Vector2(transform.position.x, transform.position.y);
 
-        if (!autoPlay)
+        if (!FindObjectOfType<GameStatus>().IsAutoPlay())
         {
             float mouseXPosition = (Input.mousePosition.x / Screen.width * screenWidthUnits);
             paddlePosition.x = Mathf.Clamp(mouseXPosition, minX, maxX);

@@ -48,6 +48,7 @@ MonoBehaviour:
   score: 0
   ptsPerBrick: 33
   scoreText: {fileID: 4233794097216720975}
+  autoPlay: 0
 --- !u!1001 &5873007058746895537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,6 +165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365606353467072392, guid: eb0c2c3727baff14fb13660eafbec50e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 440.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb0c2c3727baff14fb13660eafbec50e, type: 3}

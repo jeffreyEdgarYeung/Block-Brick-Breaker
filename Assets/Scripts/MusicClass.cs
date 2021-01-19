@@ -9,6 +9,7 @@ public class MusicClass : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
         audioSource = GetComponent<AudioSource>();
+
     }
 
     public void PlayMusic()

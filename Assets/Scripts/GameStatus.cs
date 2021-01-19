@@ -14,6 +14,9 @@ public class GameStatus : MonoBehaviour
     [SerializeField] int lives = 3;
     [SerializeField] GameObject lifeSprite;
     [SerializeField] int maxScoreLength = 4;
+    [SerializeField] AudioClip[] lifeSounds;
+
+    AudioSource gameAudioSource;
 
     void Awake()
     {
@@ -31,6 +34,7 @@ public class GameStatus : MonoBehaviour
 
     void Start()
     {
+        gameAudioSource = GetComponent<AudioSource>(); 
         scoreText.text = GetScoreString();
         RenderLives();
     }
@@ -44,7 +48,14 @@ public class GameStatus : MonoBehaviour
 
     public void AddToScore()
     {
+        int prevScore = score;
+
         score += ptsPerBrick;
+        
+        if(score/1000 != prevScore / 1000)
+        {
+            GainLife();
+        }
         scoreText.text = GetScoreString();
 
     }
@@ -75,7 +86,14 @@ public class GameStatus : MonoBehaviour
     public void LoseLife()
     {
         lives--;
-        GetComponent<AudioSource>().Play();
+        gameAudioSource.PlayOneShot(lifeSounds[0]);
+        RenderLives();
+    }
+
+    public void GainLife()
+    {
+        lives++;
+        gameAudioSource.PlayOneShot(lifeSounds[1], 0.5f);
         RenderLives();
     }
 

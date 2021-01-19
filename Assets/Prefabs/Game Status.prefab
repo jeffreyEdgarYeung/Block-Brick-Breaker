@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726307505999344533}
   - component: {fileID: 2644158835131727343}
-  - component: {fileID: 1993791179573734179}
+  - component: {fileID: 8378738815320661601}
   m_Layer: 0
   m_Name: Game Status
   m_TagString: Untagged
@@ -53,7 +53,11 @@ MonoBehaviour:
   lives: 3
   lifeSprite: {fileID: 710744781834335888, guid: ad43fb4be1a59fd4985ef72a71222a7a,
     type: 3}
---- !u!82 &1993791179573734179
+  maxScoreLength: 4
+  lifeSounds:
+  - {fileID: 8300000, guid: 01ad0be4828d28a41a8f8f5e2f64b31e, type: 3}
+  - {fileID: 8300000, guid: e115360989f87bc4f9c5de33ca4100d0, type: 3}
+--- !u!82 &8378738815320661601
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,9 +67,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 01ad0be4828d28a41a8f8f5e2f64b31e, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.45
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -72,4 +72,9 @@ public class Ball : MonoBehaviour
             ballRigidbody.velocity += velocityAdjustment;
         }
     }
+
+    public void Reset()
+    {
+        launched = false;
+    }
 }

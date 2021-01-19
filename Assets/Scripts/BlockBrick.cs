@@ -34,7 +34,7 @@ public class BlockBrick : MonoBehaviour
         
         if (tag == "Breakable")
         {
-            AudioSource.PlayClipAtPoint(breakSFX, Camera.main.transform.position, .08f);
+            AudioSource.PlayClipAtPoint(breakSFX, Camera.main.transform.position, .16f);
             if( timesHit >= hitPoints)
             {
                 DestroyBrick();

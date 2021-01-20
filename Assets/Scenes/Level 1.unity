@@ -243,6 +243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Music
       objectReference: {fileID: 0}
+    - target: {fileID: 7079499897384441774, guid: 6624ecc372b19f6499a3ec26689b8f75,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6624ecc372b19f6499a3ec26689b8f75, type: 3}
 --- !u!1001 &1916901332
@@ -592,11 +597,6 @@ PrefabInstance:
     - target: {fileID: 726307505999344533, guid: 918397571914b8c4898d47d56d6eb385,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2644158835131727343, guid: 918397571914b8c4898d47d56d6eb385,
-        type: 3}
-      propertyPath: score
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7915818774096488827, guid: 918397571914b8c4898d47d56d6eb385,

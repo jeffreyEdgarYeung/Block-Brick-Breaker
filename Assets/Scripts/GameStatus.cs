@@ -11,7 +11,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField] int ptsPerBrick = 33;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] bool autoPlay = false;
-    [SerializeField] int lives = 3;
+    [SerializeField] int lives = 4;
     [SerializeField] GameObject lifeSprite;
     [SerializeField] int maxScoreLength = 4;
     [SerializeField] AudioClip[] lifeSounds;

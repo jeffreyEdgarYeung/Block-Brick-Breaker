@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c554a0eac32f9d34eb0ebc29c0a646a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 1.35
+  gameSpeed: 1.2
   score: 0
   ptsPerBrick: 33
   scoreText: {fileID: 4233794097216720975}
   autoPlay: 0
-  lives: 3
+  lives: 4
   lifeSprite: {fileID: 710744781834335888, guid: ad43fb4be1a59fd4985ef72a71222a7a,
     type: 3}
   maxScoreLength: 4
@@ -69,7 +69,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.19
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -273,7 +273,12 @@ PrefabInstance:
     - target: {fileID: 5365606353467072392, guid: eb0c2c3727baff14fb13660eafbec50e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 440.8
+      value: 437
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365606353467072392, guid: eb0c2c3727baff14fb13660eafbec50e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 465
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb0c2c3727baff14fb13660eafbec50e, type: 3}
